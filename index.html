@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Detective</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/search-icon.svg">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="wrapper">
+
+        <div class="heading">
+             <p class="title">Dev Detective</p>
+             <label>
+                <input class="toggle-checkbox" type="checkbox" id="btn-mode"></input>
+                <div class="toggle-slot">
+                  <div class="sun-icon-wrapper">
+                    <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                  </div>
+                  <div class="toggle-button"></div>
+                  <div class="moon-icon-wrapper">
+                    <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                  </div>
+                </div>
+              </label>
+        </div>
+
+        <div id="app">
+            <div class="input-container active ">
+                <input type="search" name="user-input" id="input" placeholder="Enter a GitHub username" required>
+                <!-- Error message when no results are found -->
+                <div class="error">
+                    <!-- <p id="no-results">no search results</p> -->
+                    <span class="tooltip" data-not-found-message>Profile Not Found</span>
+                </div>
+                <!-- Search for a GitHub user -->
+                <button class="btn-search" id="submit">Search</button>
+            </div>
+
+
+            <div class="profile-container">
+                <div class="profile-content">
+
+                    <div class="profile-header">
+                        <img id="avatar" src="#" alt="">
+                        <div class="profile-info-wrapper">
+                            <div class="profile-name">
+                                <h2 id="name"></h2>
+                                <a href="#" target="_blank" rel="noopener noreferrer" id="user"></a>
+                            </div>
+                            <p id="date"></p>
+                        </div>
+                    </div>
+
+                    <div class="profile-body">
+                        <!-- Profile Bio -->
+                        <div class="profile-bio">
+                            <p id="bio"></p>
+                        </div>
+
+                         <!-- Profile Stats -->
+                         <div class="profile-stats-wrapper">
+                            <div class="profile-stats-item">
+                                <p class="profile-stats-title">Repos</p>
+                                <p class="profile-stats-number" id="repos"></p>
+                            </div>
+                            <div class="profile-stats-item">
+                                <p class="profile-stats-title">Followers</p>
+                                <p class="profile-stats-number" id="followers"></p>
+                            </div>
+                            <div class="profile-stats-item">
+                                <p class="profile-stats-title">Following</p>
+                                <p class="profile-stats-number" id="following"></p>
+                            </div>
+                        </div>
+
+
+                        <!-- Profile Info -->
+                        <div class="profile-bottom-wrapper">
+                            <div class="profile-info-item">
+                                <div class="bottom-icons"><img src="./images/location-icon.svg" alt=""></div>
+                                <p id="location"></p>
+                            </div>
+                            <div class="profile-info-item">
+                                <div class="bottom-icons"><img src="./images/website-icon.svg" alt=""></div>
+                                <a href="#" id="page"></a>
+                            </div>
+                            <div class="profile-info-item">
+                                <div class="bottom-icons"><img src="./images/twitter-icon.svg" alt=""></div>
+                                <a href="#" id="twitter"></a>
+                            </div>
+                            <div class="profile-info-item">
+                                <div class="bottom-icons"><img src="./images/company-icon.svg" alt=""></div>
+                                <p id="company"></p>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+
+
+
+
+                </div>
+                 
+            </div>
+    
+
+        </div>
+
+        
+    </div>
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
